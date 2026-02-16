@@ -1,0 +1,644 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--text-main: #2f4f4f;
+	--text-muted: #555;
+	--text-light: #888;
+	--accent-purple: #6b1d73;
+	--accent-purple-dark: #541459;
+	--accent-green: #0c6d3c;
+	--accent-green-dark: #095429;
+	--card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	--card-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+	--radius: 16px;
+	--max-width: 1400px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-family: "Roboto", Arial, sans-serif;
+	color: var(--text-main);
+	background: #ffffff;
+}
+
+.page {
+	width: 100%;
+	max-width: var(--max-width);
+}
+
+.site-header {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0 5px 0;
+}
+
+.logo {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+}
+
+.tagline {
+	text-align: center;
+	margin: 5px 0 15px 0;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.section {
+	width: 100%;
+}
+
+.section-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8% 20px;
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 1%;
+}
+
+.section-title--tight {
+	margin-top: 0;
+}
+
+.section-title hr {
+	flex: 1;
+	border: none;
+	border-top: 2px solid var(--text-main);
+}
+
+.section-title span {
+	margin: 0 15px;
+}
+
+.section-subtitle {
+	text-align: center;
+	margin: 0;
+	padding: 10px 0 5px 0;
+	color: #999;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.philosophy-cards-section,
+.activities-section,
+.social-section {
+	text-align: center;
+	padding: 40px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.philosophy-cards-container,
+.cards-container,
+.cta-cards-container {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+	max-width: var(--max-width);
+	margin: 0 auto;
+}
+
+.philosophy-cards-container {
+	gap: 30px;
+}
+
+.cards-container,
+.cta-cards-container {
+	gap: 30px;
+}
+
+.philosophy-card,
+.activity-card,
+.cta-card {
+	background: #fff;
+	border-radius: var(--radius);
+	box-shadow: var(--card-shadow);
+	text-align: center;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.philosophy-card:hover,
+.activity-card:hover,
+.cta-card:hover {
+	transform: translateY(-8px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+.philosophy-card {
+	flex: 0 1 360px;
+	min-width: 280px;
+	max-width: 360px;
+	width: 100%;
+	height: auto;
+	padding: 30px 25px;
+	justify-content: flex-start;
+}
+
+.philosophy-card img {
+	width: 150px;
+	height: 150px;
+	object-fit: contain;
+	margin: 0 auto 20px auto;
+	display: block;
+}
+
+.mission-image {
+	margin-top: 25px;
+}
+
+.philosophy-card h3 {
+	font-size: 28px;
+	margin-bottom: 15px;
+	color: var(--text-main);
+	font-weight: 600;
+}
+
+.philosophy-card p {
+	font-size: 16px;
+	color: var(--text-muted);
+	line-height: 1.6;
+	margin-bottom: 12px;
+	text-align: left;
+}
+
+.objectives-list {
+	text-align: left;
+	margin: 0;
+	padding-left: 20px;
+	font-size: 16px;
+	color: var(--text-muted);
+	line-height: 1.8;
+}
+
+.objectives-list li {
+	margin-bottom: 15px;
+}
+
+.objectives-list li:last-child {
+	margin-bottom: 0;
+}
+
+.sdg-grid {
+	width: 100%;
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.sdg-icons {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 28px;
+	align-items: center;
+	justify-items: center;
+}
+
+.sdg-icons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sdg-icons img {
+	width: 180px;
+	height: 180px;
+	object-fit: contain;
+}
+
+.sdg-disclaimer {
+	text-align: center;
+	font-size: 10px;
+	color: var(--text-light);
+	margin-top: -20px;
+	padding: 0 20px;
+}
+
+.activity-card {
+	flex: 1;
+	min-width: 280px;
+	max-width: 500px;
+	width: 500px;
+	padding: 20px;
+}
+
+.activity-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card img {
+	width: 220px;
+	height: 220px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 15px;
+}
+
+.activity-card h3 {
+	font-size: 22px;
+	margin-bottom: 10px;
+	color: #444;
+}
+
+.activity-card p {
+	font-size: 15px;
+	color: var(--text-muted);
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+
+.activity-card a {
+	color: #7b44d9;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.activity-card a:hover {
+	text-decoration: underline;
+}
+
+.section-wrapper,
+.contact-section {
+	width: 100%;
+	padding: 60px 40px;
+	font-family: "Segoe UI", Arial, sans-serif;
+	background: #ffffff;
+}
+
+.section-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cta-card {
+	flex: 1;
+	min-width: 280px;
+	max-width: 550px;
+	padding: 40px 30px;
+	justify-content: space-between;
+}
+
+.cta-card img {
+	width: 180px;
+	height: 180px;
+	object-fit: contain;
+	margin-bottom: 25px;
+}
+
+.cta-card h2 {
+	font-size: 28px;
+	color: #1b3a33;
+	line-height: 1.3;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.cta-card p {
+	font-size: 16px;
+	color: var(--text-muted);
+	line-height: 1.7;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.btn-whatsapp,
+.btn-volunteer {
+	padding: 14px 28px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	display: inline-block;
+	transition: 0.3s;
+	margin-top: auto;
+}
+
+.btn-whatsapp {
+	background: var(--accent-purple);
+	color: #fff;
+}
+
+.btn-whatsapp:hover {
+	background: var(--accent-purple-dark);
+	transform: scale(1.05);
+}
+
+.btn-volunteer {
+	background: var(--accent-green);
+	color: #fff;
+}
+
+.btn-volunteer:hover {
+	background: var(--accent-green-dark);
+	transform: scale(1.05);
+}
+
+.contact-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 40px;
+	max-width: var(--max-width);
+}
+
+.contact-text {
+	flex: 1;
+	min-width: 300px;
+}
+
+.contact-text h2 {
+	font-size: 32px;
+	font-weight: 600;
+	color: var(--text-main);
+	margin-bottom: 10px;
+	border-bottom: 2px solid #dcdcdc;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+.contact-text p {
+	font-size: 17px;
+	color: #444;
+	line-height: 1.7;
+	margin-bottom: 18px;
+}
+
+.contact-text .label {
+	margin-top: 15px;
+	font-weight: 600;
+	color: var(--text-main);
+	font-size: 18px;
+}
+
+.email-text {
+	margin-top: 8px;
+	font-size: 17px;
+	color: #444;
+}
+
+.email-text a {
+	color: #7a0ead;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.contact-map {
+	flex: 1.2;
+	min-width: 320px;
+}
+
+.contact-map iframe {
+	width: 100%;
+	height: 350px;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	margin-top: 10px;
+	flex-wrap: wrap;
+}
+
+.social-icons img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.social-icons img:hover {
+	transform: scale(1.1);
+	opacity: 0.9;
+}
+
+.footer {
+	width: 100%;
+	background: #ffffff;
+	padding: 18px 10px;
+	text-align: center;
+	font-family: "Segoe UI", Arial, sans-serif;
+	font-size: 14px;
+	color: var(--text-muted);
+	border-top: 1px solid #ddd;
+}
+
+.footer span {
+	font-weight: 600;
+	color: #1d3f3c;
+}
+
+@media (max-width: 850px) {
+	.contact-text h2 {
+		font-size: 28px;
+	}
+
+	.contact-map iframe {
+		height: 280px;
+	}
+}
+
+@media (max-width: 768px) {
+	.logo {
+		width: 50%;
+	}
+
+	.section-title {
+		font-size: 24px;
+		padding: 3% 2%;
+	}
+
+	.tagline {
+		font-size: 18px;
+		margin: 1% 3%;
+	}
+
+	.section-subtitle {
+		font-size: 22px;
+	}
+
+	.philosophy-card {
+		min-width: 100%;
+		max-width: 100%;
+		height: auto;
+		min-height: 500px;
+	}
+
+	.activity-card {
+		min-width: 100%;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.activity-card {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.philosophy-card img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.philosophy-card h3 {
+		font-size: 24px;
+	}
+
+	.philosophy-card p {
+		font-size: 15px;
+		text-align: center;
+	}
+
+	.sdg-icons {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 0;
+		row-gap: 44px;
+	}
+
+	.cta-card {
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	.cta-card img {
+		width: 150px;
+		height: 150px;
+	}
+
+	.cta-card h2 {
+		font-size: 24px;
+	}
+
+	.cta-card p {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	.site-header {
+		padding: 8px 0 0 0;
+	}
+
+	.logo {
+		width: 70%;
+	}
+
+	.section-title {
+		font-size: 20px;
+		padding: 16px 12px;
+	}
+
+	.section-title span {
+		margin: 0 10px;
+	}
+
+	.section-subtitle {
+		font-size: 18px;
+		padding: 8px 0 4px 0;
+	}
+
+	.philosophy-cards-section,
+	.activities-section,
+	.section-wrapper,
+	.contact-section,
+	.social-section,
+	.sdg-grid {
+		padding: 28px 16px;
+	}
+
+	.sdg-grid {
+		padding: 28px 24px;
+	}
+
+	.philosophy-card {
+		min-height: 0;
+		height: auto;
+		padding: 24px 18px;
+	}
+
+	.philosophy-card p,
+	.objectives-list {
+		text-align: left;
+	}
+
+	.sdg-icons {
+		column-gap: 0;
+		row-gap: 44px;
+	}
+
+	.sdg-icons img {
+		width: 132px;
+		height: 132px;
+	}
+
+	.cards-container,
+	.cta-cards-container {
+		gap: 20px;
+	}
+
+	.activity-card,
+	.cta-card {
+		width: 100%;
+	}
+
+	.activity-card img {
+		width: 180px;
+		height: 180px;
+	}
+
+	.cta-card h2 {
+		font-size: 20px;
+	}
+
+	.cta-card p {
+		font-size: 14px;
+	}
+
+	.btn-whatsapp,
+	.btn-volunteer {
+		width: 100%;
+		text-align: center;
+	}
+
+	.contact-text h2 {
+		font-size: 24px;
+	}
+
+	.contact-text p,
+	.email-text {
+		font-size: 15px;
+	}
+
+	.contact-map iframe {
+		height: 240px;
+	}
+}

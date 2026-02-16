@@ -1,4 +1,3 @@
-<!-- rebuild -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,996 +5,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jalte Diye Foundation Website</title>
-    
-    <style>
-        /* Reset default margins and padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        
-        body > * {
-            width: 100%;
-            max-width: 1400px;
-        }
-        
-        /* Mobile-first responsive design */
-        .section-container {
-            display: flex;
-            align-items: center;
-            margin: 0.5% 3%;
-            padding: 0.5%;
-        }
-        
-        .section-image {
-            width: 30%;
-            height: auto;
-        }
-        
-        .section-text {
-            margin-left: 2%;
-        }
-        
-        .section-text-right {
-            margin-right: 2%;
-        }
-        
-        .section-heading {
-            color: #2f4f4f !important;
-            font-family: 'Roboto', arial, sans-serif;
-            font-size: 44px !important;
-            font-weight: normal;
-            margin: 0 0 0.8% 0;
-            text-align: left;
-        }
-        
-        .section-paragraph {
-            color: #2f4f4f !important;
-            font-family: 'Roboto', arial, sans-serif;
-            font-size: 18px !important;
-            font-weight: normal;
-            margin: 0 0 1.5% 0;
-            line-height: 1.5;
-            text-align: left;
-        }
-        
-        /* Mobile styles - when screen is 768px or smaller */
-        @media (max-width: 768px) {
-            .section-container {
-                flex-direction: column !important;
-                text-align: center;
-                margin: 5% 5%;
-            }
-            
-            .section-image {
-                width: 80% !important;
-                margin-bottom: 4%;
-            }
-            
-            .section-text, .section-text-right {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                width: 100%;
-            }
-            
-            .section-heading {
-                text-align: center !important;
-                font-size: 36px !important;
-            }
-            
-            .section-paragraph {
-                text-align: center !important;
-                font-size: 16px !important;
-            }
-            
-            /* Make main heading smaller on mobile */
-            h1 {
-                font-size: 32px !important;
-                padding-top: 2% !important;
-            }
-            
-            /* Adjust tagline for mobile */
-            .tagline {
-                font-size: 18px !important;
-                margin: 1% 3% !important;
-            }
-            
-            /* Philosophy section adjustments */
-            .philosophy-section {
-                font-size: 24px !important;
-                padding: 3% 2% !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- =========================== HEADER SECTION =========================== -->
-    <img style="display: block; width: 100%;" src="logo.png" alt="Logo Of Our NGO">
-    
-    <h1 style="margin: 0; text-align: center; padding: 10px 0 5px 0; color: #7f0e6e !important;font-family: 'Roboto', arial, sans-serif;font-size: 24px !important; font-weight: normal;">
-        Education & Peace
-    </h1>
-    
-    <div class="tagline" style="text-align: center; margin: 5px 0 15px 0;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 16px !important; font-weight: normal;">
-        <span>Empowering individuals through social education to achieve global peace</span>
-    </div>
-    <!-- =========================== PHILOSOPHY SECTION =========================== -->
-    <div class="philosophy-section" style="text-align: center; margin-top: 0%;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 32px !important; font-weight: normal; display: flex; align-items: center; justify-content: center; padding: 0.8% 20px;">
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-right: 15px;">
-        <span>Our philosophy</span>
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-left: 15px;">
-    </div> 
-    
-    <style>
-    .philosophy-cards-section {
-        text-align: center;
-        padding: 40px 20px;
-        font-family: 'Roboto', Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    <main class="page">
+        <header class="site-header">
+            <img class="logo" src="images/logo.png" alt="Logo Of Our NGO">
+            <p class="tagline">Empowering individuals through holistic social education to achieve global peace</p>
+        </header>
 
-    .philosophy-cards-container {
-        display: flex;
-        gap: 100px;
-        justify-content: center;
-        align-items: stretch;
-        flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .philosophy-card {
-        flex: 1;
-        min-width: 280px;
-        max-width: 500px;
-        width: 500px;
-        height: 650px;
-        background: #fff;
-        padding: 30px 25px;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        text-align: center;
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .philosophy-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-
-    .philosophy-card img {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-        margin: 0 auto 20px auto;
-        display: block;
-    }
-
-    .philosophy-card h3 {
-        font-size: 28px;
-        margin-bottom: 15px;
-        color: #2f4f4f;
-        font-weight: 600;
-    }
-
-    .philosophy-card p {
-        font-size: 16px;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 12px;
-        text-align: left;
-    }
-
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-        .philosophy-card {
-            min-width: 100%;
-            max-width: 100%;
-            height: auto;
-            min-height: 500px;
-        }
-        
-        .philosophy-card img {
-            width: 120px;
-            height: 120px;
-        }
-        
-        .philosophy-card h3 {
-            font-size: 24px;
-        }
-        
-        .philosophy-card p {
-            font-size: 15px;
-            text-align: center;
-        }
-    }
-    </style>
-
-    <div class="philosophy-cards-section">
-        <div class="philosophy-cards-container">
-
-            <!-- Vision & Mission Card (Combined) -->
-            <div class="philosophy-card">
-                <img src="our vision.png" alt="Our Vision">
-                <h3>Our Vision</h3>
-                <p>We envision a world in which the entire human population cooperates as a family for global peace.</p>
-                
-                <img src="our mission.png" alt="Our Mission" style="margin-top: 25px;">
-                <h3>Our Mission</h3>
-                <p>Providing social education globally to the humans for peaceful life and harmonious relations.</p>
+        <section class="section">
+            <div class="section-title section-title--tight">
+                <hr>
+                <span>Our philosophy</span>
+                <hr>
             </div>
 
-            <!-- Our Objectives Card -->
-            <div class="philosophy-card">
-                <img src="our objective.png" alt="Our Objectives">
-                <h3>Our Objectives</h3>
-                <p>To provide quality social education to humans to cooperatively resolve global threats to humanity.</p>
-                <p>To conduct interactive sessions for community members with subject experts to reduce inequalities for enhanced participation among individuals.</p>
-                <p>Awareness programs for participants in growing climate change concerns.</p>
-                <p>To provide humans a platform for discussion-based learning of their rights and responsibilities for peace and justice in society.</p>
+            <div class="philosophy-cards-section">
+                <div class="philosophy-cards-container">
+                    <div class="philosophy-card">
+                        <img src="images/our vision.png" alt="Our Vision">
+                        <h3>Our Vision</h3>
+                        <p>We envision a world in which the entire human population cooperates as a family for global peace.</p>
+
+                    </br></br>
+                        <img src="images/our mission.png" alt="Our Mission" style="margin-top: 25px;">
+                        <h3>Our Mission</h3>
+                        <p>Providing social education globally to the humans for peaceful life and harmonious relations.</p>
+                    </div>
+
+                    <div class="philosophy-card">
+                        <img src="images/our objective.png" alt="Our Objectives">
+                        <h3>Our Objectives</h3>
+                        <ul class="objectives-list">
+                            <li>To provide quality social education to humans to cooperatively resolve global threats to humanity.</li>
+                            <li>To conduct interactive sessions for community members with subject experts to reduce inequalities for enhanced participation among individuals.</li>
+                            <li>Awareness programs for participants in growing climate change concerns.</li>
+                            <li>To provide humans a platform for discussion-based learning of their rights and responsibilities for peace and justice in society.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <hr>
+                <span>Inspired by United Nations</span>
+                <hr>
             </div>
 
-        </div>
-    </div>
-    
-    <!-- =========================== UN SDG SECTION =========================== -->
-    <div class="philosophy-section" style="text-align: center; margin-top: 1%;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 32px !important; font-weight: normal; display: flex; align-items: center; justify-content: center; padding: 2% 20px;">
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-right: 15px;">
-        <span>Inspired by United Nations</span>
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-left: 15px;">
-    </div>
-    
-    <div class="tagline" style="text-align: center; margin-top: 0.2%;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 16px !important; font-weight: normal;">
-    <h1 style="margin: 0; text-align: center; padding: 10px 0 5px 0; color: #7f0e6e !important;font-family: 'Roboto', arial, sans-serif;font-size: 24px !important; font-weight: normal;">
-        Our Sustainable Development Goals
-    </h1>
-    </div>
-
-    <div style="width:100%; text-align:center; padding:40px 20px;">
-        <div style="
-            display:flex; 
-            justify-content:center; 
-            gap:160px; 
-            flex-wrap:wrap;
-        ">
-            <a href="https://sdgs.un.org/goals/goal4" target="_blank" class="sdg-link">
-                <img src="1.webp" alt="Quality Education" style="width:150px; height:150px; object-fit:contain;">
-            </a>
-            <a href="https://sdgs.un.org/goals/goal10" target="_blank" class="sdg-link">
-                <img src="2.webp" alt="Reduced Inequalities" style="width:150px; height:150px; object-fit:contain;">
-            </a>
-            <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="sdg-link">
-                <img src="3.webp" alt="Climate Action" style="width:150px; height:150px; object-fit:contain;">
-            </a>
-            <a href="https://sdgs.un.org/goals/goal16" target="_blank" class="sdg-link">
-                <img src="4.webp" alt="Peace and Justice" style="width:150px; height:150px; object-fit:contain;">
-            </a>
-        </div>
-    </div>
-
-    <!-- =========================== ACTIVITIES SECTION =========================== -->
-    <div class="philosophy-section" style="text-align: center; margin-top: 1%;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 32px !important; font-weight: normal; display: flex; align-items: center; justify-content: center; padding: 2% 20px;">
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-right: 15px;">
-        <span>A glimpse of our social work activities</span>
-        <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-left: 15px;">
-    </div>
-    
-    <style>
-    .activities-section {
-        text-align: center;
-        padding: 40px 20px;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .activities-section h2 {
-        font-size: 28px;
-        margin-bottom: 40px;
-        font-weight: 600;
-        color: #333;
-    }
-
-    .cards-container {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-        align-items: stretch;
-        flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .activity-card {
-        width: 360px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        text-align: center;
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .activity-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    .activity-card img {
-        width: 220px;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 15px;
-    }
-
-    .activity-card h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
-        color: #444;
-    }
-
-    .activity-card p {
-        font-size: 15px;
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 10px;
-    }
-
-    .activity-card a {
-        color: #7b44d9;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 14px;
-    }
-
-    .activity-card a:hover {
-        text-decoration: underline;
-    }
-    </style>
-
-    <div class="activities-section">
-        <div class="cards-container">
-
-            <!-- MENTAL HEALTH CARD -->
-            <div class="activity-card">
-                <img src="card1.webp" alt="Mental Health Talk Image">
-                <h3>Mental health talk</h3>
-                <p>🌸 We are delighted to share that our virtual meet on Mental Health & Well-Being was a great success!</p>
-                <p>💬 Participants from diverse backgrounds joined meaningful conversations about prioritizing mental health.</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375747976717225984/" target="_blank">Learn more on LinkedIn</a>
+            <h2 class="section-subtitle">Our Sustainable Development Goals</h2>
+            <br>
+            <p class="sdg-disclaimer"><em>SDG icons used for informational purposes. Not endorsed by the United Nations.</em></p>
+            <div class="sdg-grid">
+                <div class="sdg-icons">
+                    <a href="https://sdgs.un.org/goals/goal4" target="_blank" class="sdg-link" rel="noopener">
+                        <img src="./images/E-WEB-Goal-04.png" alt="Quality Education">
+                    </a>
+                    <a href="https://sdgs.un.org/goals/goal10" target="_blank" class="sdg-link" rel="noopener">
+                        <img src="./images/E-WEB-Goal-10.png" alt="Reduced Inequalities">
+                    </a>
+                    <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="sdg-link" rel="noopener">
+                        <img src="./images/E-WEB-Goal-13.png" alt="Climate Action">
+                    </a>
+                    <a href="https://sdgs.un.org/goals/goal16" target="_blank" class="sdg-link" rel="noopener">
+                        <img src="./images/E-WEB-Goal-16.png" alt="Peace and Justice">
+                    </a>
+                </div>
             </div>
 
-            <!-- PLANTATION CARD -->
-            <div class="activity-card">
-                <img src="card2.webp" alt="Plantation Campaign Image">
-                <h3>Plantation campaign</h3>
-                <p>🌱 A recent plantation campaign during monsoon season planted 50+ trees as a social welfare initiative.</p>
-                <p>🤝 Let's unite to create a greener & healthier environment.</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7360638596485177344/" target="_blank">Learn more on LinkedIn</a>
-            </div>
-
-            <!-- WOMEN IN STEM CARD -->
-            <div class="activity-card">
-                <img src="card3.webp" alt="Women in STEM Image">
-                <h3>Women in STEM</h3>
-                <p>🌍 We served as a welfare partner, sponsoring events that support technical education for women.</p>
-                <p>✨ Our talk highlighted the role of education in fostering global peace and harmony.</p>
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7349866389077176320" target="_blank">Learn more on LinkedIn</a>
-            </div>
-
-        </div>
-    </div>
-    <style>
-        .section-wrapper {
-            width: 100%;
-            padding: 60px 40px;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ---------- Cards Container ---------- */
-        .cta-cards-container {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* ---------- CTA Card ---------- */
-        .cta-card {
-            flex: 1;
-            min-width: 280px;
-            max-width: 550px;
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .cta-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .cta-card img {
-            width: 180px;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 25px;
-        }
-
-        .cta-card h2 {
-            font-size: 28px;
-            color: #1b3a33;
-            line-height: 1.3;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .cta-card p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        /* ---------- Buttons ---------- */
-        .btn-whatsapp,
-        .btn-volunteer {
-            padding: 14px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            display: inline-block;
-            transition: 0.3s;
-            margin-top: auto;
-        }
-
-        .btn-whatsapp {
-            background: #6b1d73;
-            color: #fff;
-        }
-
-        .btn-whatsapp:hover {
-            background: #541459;
-            transform: scale(1.05);
-        }
-
-        .btn-volunteer {
-            background: #0c6d3c;
-            color: #fff;
-        }
-
-        .btn-volunteer:hover {
-            background: #095429;
-            transform: scale(1.05);
-        }
-
-        /* Small screens responsive */
-        @media (max-width: 768px) {
-            .cta-card {
-                min-width: 100%;
-                max-width: 100%;
-            }
             
-            .cta-card img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .cta-card h2 {
-                font-size: 24px;
-            }
-            
-            .cta-card p {
-                font-size: 15px;
-            }
-        }
-    </style>
+        </section>
 
-    <!-- =========================== CTA SECTION =========================== -->
-    <div class="section-wrapper">
-        <div class="cta-cards-container">
-
-            <!-- Card 1: Empowering Growth -->
-            <div class="cta-card">
-                <img src="our objective.png" alt="Empowerment Icon">
-                <h2>Empowering personal growth & societal progress</h2>
-                <p>
-                    At Really Real Education, we are dedicated to providing transformative educational content that inspires 
-                    personal growth and positive change in society. Our comprehensive programs cover a wide range of 
-                    self-improvement topics.
-                </p>
-                <a href="https://api.whatsapp.com/message/XSTSJ3NR7SL6E1" target="_blank" class="btn-whatsapp">💬 | Chat on WhatsApp</a>
+        <section class="section">
+            <div class="section-title">
+                <hr>
+                <span>A glimpse of our social work activities</span>
+                <hr>
             </div>
 
-            <!-- Card 2: Join Community -->
-            <div class="cta-card">
-                <img src="volunteer.webp" alt="Community Icon">
-                <h2>Become part of our community</h2>
-                <p>
-                    Let's help each other and make this world a better place. Help people learn to live better.
-                    Join hands to create a meaningful impact.
-                </p>
-                <a href="https://www.linkedin.com/posts/jalte-diye-foundation_job-description-activity-7308198779852120067-yDxD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUgkYQB_peulQZzc00QRF6CKt4O1jKHCx0" target="_blank" class="btn-volunteer">Join us as a volunteer</a>
+            <div class="activities-section">
+                <div class="cards-container">
+                    <div class="activity-card">
+                        <img src="images/card1.webp" alt="Mental Health Talk Image">
+                        <h3>Mental health talk</h3>
+                        <p>🌸 We are delighted to share that our virtual meet on Mental Health & Well-Being was a great success!</p>
+                        <p>💬 Participants from diverse backgrounds joined meaningful conversations about prioritizing mental health.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7375747976717225984/" target="_blank" rel="noopener">Learn more on LinkedIn</a>
+                    </div>
+
+                    <div class="activity-card">
+                        <img src="images/card2.webp" alt="Plantation Campaign Image">
+                        <h3>Plantation campaign</h3>
+                        <p>🌱 A recent plantation campaign during monsoon season planted 50+ trees as a social welfare initiative.</p>
+                        <p>🤝 Let's unite to create a greener & healthier environment.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7360638596485177344/" target="_blank" rel="noopener">Learn more on LinkedIn</a>
+                    </div>
+
+                    <div class="activity-card">
+                        <img src="images/card3.webp" alt="Women in STEM Image">
+                        <h3>Women in STEM</h3>
+                        <p>🌍 We served as a welfare partner, sponsoring events that support technical education for women.</p>
+                        <p>✨ Our talk highlighted the role of education in fostering global peace and harmony.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7349866389077176320" target="_blank" rel="noopener">Learn more on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title section-title--tight">
+                <hr>
+                <span>Let's work together</span>
+                <hr>
             </div>
 
-        </div>
-    </div>
+            <div class="section-wrapper">
+                <div class="cta-cards-container">
+                    <div class="cta-card">
+                        <img src="images/empowerment.png" alt="Empowerment Icon">
+                        <h2>Empowering personal growth & societal progress</h2>
+                        <p>
+                            At Really Real Education, we are dedicated to providing transformative educational content that inspires
+                            personal growth and positive change in society. Our comprehensive programs cover a wide range of
+                            self-improvement topics.
+                        </p>
+                        <a href="https://api.whatsapp.com/message/XSTSJ3NR7SL6E1" target="_blank" class="btn-whatsapp" rel="noopener">💬 | Chat on WhatsApp</a>
+                    </div>
 
-    <!-- =========================== CONTACT SECTION =========================== -->
-    <style>
-    .contact-section {
-        width: 100%;
-        padding: 60px 40px;
-        font-family: "Segoe UI", Arial, sans-serif;
-        background: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+                    <div class="cta-card">
+                        <img src="images/Volunteers.jpg" alt="Community Icon">
+                        <h2>Become part of our community</h2>
+                        <p>
+                            Let's help each other and make this world a better place. Help people learn to live better.
+                            Join hands to create a meaningful impact.
+                        </p>
+                        <a href="https://www.linkedin.com/posts/jalte-diye-foundation_job-description-activity-7308198779852120067-yDxD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUgkYQB_peulQZzc00QRF6CKt4O1jKHCx0" target="_blank" class="btn-volunteer" rel="noopener">Join us as a volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    .contact-container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 40px;
-        max-width: 1400px;
-    }
-
-    /* Left Text Section */
-    .contact-text {
-        flex: 1;
-        min-width: 300px;
-    }
-
-    .contact-text h2 {
-        font-size: 32px;
-        font-weight: 600;
-        color: #2f4f4f;
-        margin-bottom: 10px;
-        border-bottom: 2px solid #dcdcdc;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    .contact-text p {
-        font-size: 17px;
-        color: #444;
-        line-height: 1.7;
-        margin-bottom: 18px;
-    }
-
-    .contact-text .label {
-        margin-top: 15px;
-        font-weight: 600;
-        color: #2f4f4f;
-        font-size: 18px;
-    }
-
-    .email-text {
-        margin-top: 8px;
-        font-size: 17px;
-        color: #444;
-    }
-
-    .email-text a {
-        color: #7a0ead;
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-    /* Map Section */
-    .contact-map {
-        flex: 1.2;
-        min-width: 320px;
-    }
-
-    .contact-map iframe {
-        width: 100%;
-        height: 350px;
-        border: none;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    /* Responsive */
-    @media (max-width: 850px) {
-        .contact-text h2 {
-            font-size: 28px;
-        }
-
-        .contact-map iframe {
-            height: 280px;
-        }
-    }
-    </style>
-
-    <div class="contact-section">
-        <div class="contact-container">
-
-            <!-- LEFT SIDE -->
-            <div class="contact-text">
-                <h2>Contact Us</h2>
-
-                <p>Dear members,<br>
-                We love to discuss and would want to hear your opinion. Feel free to visit during office hours or write to us.</p>
-
-                <div class="label">Jalte Diye Foundation</div>
-                <p>Jaipur, Rajasthan, India</p>
-
-                <div class="label">Email:</div>
-                <p class="email-text">
-                    <a href="mailto:@reallyrealeducation.org">contact - @reallyrealeducation.org</a>
-                </p>
+        <section class="section">
+            <div class="section-title section-title--tight">
+                <hr>
+                <span>Let's meet</span>
+                <hr>
             </div>
 
-            <!-- RIGHT SIDE MAP -->
-            <div class="contact-map">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.45803845975!2d75.78814047510891!3d26.86266606237816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3d4b29bde3f%3A0x4e06a5e1dd949bd5!2sGanpati%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302015!5e0!3m2!1sen!2sin!4v1700000000000"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
+            <div class="contact-section">
+                <div class="contact-container">
+                    <div class="contact-text">
+                        <h2>Contact Us</h2>
+                        <p>Dear members,<br>
+                        We love to discuss and would want to hear your opinion. Feel free to visit during office hours or write to us.</p>
+
+                        <div class="label">Jalte Diye Foundation</div>
+                        <p>35, Hanumaan Colony, Kartarpura, Jaipur, Rajasthan, India, 302006</p>
+
+                        <div class="label">Email:</div>
+                        <p class="email-text">
+                            <a href="mailto:@reallyrealeducation.org">contact - @reallyrealeducation.org</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.245!2d75.786242!3d26.888311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db15d8d8d8d8d%3A0x0!2s35+Hanumaan+Colony+Kartarpura+Jaipur+302006!5e0!3m2!1sen!2sin!4v1700000000000"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title section-title--tight">
+                <hr>
+                <span>Let's connect with us</span>
+                <hr>
             </div>
 
-        </div>
-    </div>
-    <!-- =========================== CHATBOT SECTION =========================== -->
-    <style>
-    /* Floating Button */
-    #chat-toggle {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #e4e8e7;
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        color: white;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-        z-index: 999999;
-    }
+            <div class="social-section">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/JalteDiyeFoundation/" target="_blank" rel="noopener"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/jalte_diye_foundation/" target="_blank" rel="noopener"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/company/jalte-diye-foundation/" target="_blank" rel="noopener"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://x.com/JalteDiyeNPO" target="_blank" rel="noopener"><img src="images/twitter.png" alt="Twitter X"></a>
+                    <a href="https://www.youtube.com/@JalteDiyeNPO" target="_blank" rel="noopener"><img src="images/yt.webp" alt="YouTube"></a>
+                </div>
+            </div>
+        </section>
 
-    #chat-toggle img {
-        width: 25px;
-    }
-
-    /* Chat Window */
-    #chat-window {
-        position: fixed;
-        bottom: 90px;
-        right: 20px;
-        width: 350px;
-        height: 520px;
-        background: white;
-        border-radius: 18px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-        overflow: hidden;
-        display: none;
-        flex-direction: column;
-        z-index: 999999;
-    }
-
-    /* Header */
-    .chat-header {
-        background: #1d3f3c;
-        padding: 20px;
-        text-align: center;
-        color: white;
-    }
-
-    .chat-header h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .chat-header img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin: 10px auto;
-        display: block;
-    }
-
-    .chat-header p {
-        font-size: 14px;
-        opacity: 0.9;
-        margin: 0;
-    }
-
-    /* Chat Messages */
-    #chat-area {
-        flex: 1;
-        padding: 15px;
-        padding-bottom: 70px;
-        overflow-y: auto;
-        background: #f7f7f7;
-    }
-
-    .bot-msg, .user-msg {
-        max-width: 80%;
-        padding: 10px 15px;
-        margin-bottom: 10px;
-        border-radius: 12px;
-        font-size: 14px;
-    }
-
-    .bot-msg {
-        background: #e3f4f1;
-        color: #425d5a;
-    }
-
-    .user-msg {
-        background: #1d3f3c;
-        color: white;
-        margin-left: auto;
-    }
-
-    /* Footer / Input Box - Fixed to bottom */
-    .input-box {
-        background: white;
-        padding: 10px 15px;
-        border-top: 1px solid #ddd;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        box-sizing: border-box;
-    }
-
-    .input-box input {
-        flex: 1;
-        padding: 12px 15px;
-        border-radius: 25px;
-        border: 1px solid #ddd;
-        outline: none;
-        font-size: 14px;
-        background: #f8f8f8;
-    }
-
-    .input-box input:focus {
-        border-color: #1d3f3c;
-        background: white;
-    }
-
-    /* Attachment icon */
-    .attach-icon {
-        width: 20px;
-        cursor: pointer;
-        opacity: 0.7;
-    }
-
-    /* Send Button Icon */
-    .send-btn {
-        background: #e4e8e7;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .send-btn img {
-        width: 18px;
-        filter: brightness(200%);
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-        #chat-window {
-            width: 92%;
-            right: 4%;
-        }
-    }
-    </style>
-
-    <!-- Floating Button -->
-    <button id="chat-toggle">
-        <img src="icon_chatbott.png" alt="Chat Icon">
-    </button>
-
-    <!-- Chat Window -->
-    <div id="chat-window">
-
-        <div class="chat-header">
-            <h3>Contact Us</h3>
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-            <p>"We'll respond as soon as we can."</p>
-        </div>
-
-        <div id="chat-area">
-            <div class="bot-msg">Hello! 👋 How can I help you today?</div>
-        </div>
-
-        <!-- Input Box -->
-        <div class="input-box">
-            <input type="text" id="user-input" placeholder="Enter your question or message here">
-
-            <img src="https://cdn-icons-png.flaticon.com/512/1250/1250615.png" class="attach-icon">
-
-            <button class="send-btn" onclick="sendMessage()">
-                <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png">
-            </button>
-        </div>
-    </div>
-
-    <script>
-    const toggle = document.getElementById("chat-toggle");
-    const chatWindow = document.getElementById("chat-window");
-    const chatArea = document.getElementById("chat-area");
-
-    toggle.onclick = () => {
-        chatWindow.style.display =
-            chatWindow.style.display === "flex" ? "none" : "flex";
-    };
-
-    // Enter key functionality
-    document.getElementById("user-input").addEventListener("keypress", function(e) {
-        if (e.key === "Enter") {
-            sendMessage();
-        }
-    });
-
-    // Send Message Function
-    function sendMessage() {
-        let input = document.getElementById("user-input");
-        let msg = input.value.trim();
-        if (msg === "") return;
-
-        appendMessage(msg, "user-msg");
-        input.value = "";
-
-        setTimeout(() => {
-            appendMessage(getBotReply(msg), "bot-msg");
-        }, 500);
-    }
-
-    function appendMessage(text, type) {
-        let div = document.createElement("div");
-        div.className = type;
-        div.innerText = text;
-        chatArea.appendChild(div);
-        chatArea.scrollTop = chatArea.scrollHeight;
-    }
-
-    // Bot Replies
-    function getBotReply(msg) {
-        msg = msg.toLowerCase();
-
-        if (msg.includes("hello") || msg.includes("hi")) return "Hi there! 😊 How can I help you?";
-        if (msg.includes("location")) return "We are located in Ganpati Nagar, Jaipur.";
-        if (msg.includes("email")) return "You can contact us at @reallyrealeducation.org";
-        if (msg.includes("timings")) return "We are open from 10 AM to 6 PM.";
-
-        return "Thank you for your message! We'll get back to you soon. 🙏";
-    }
-    </script>
-
-    <!-- =========================== SOCIAL MEDIA SECTION =========================== -->
-    <style>
-    .social-section {
-        width: 100%;
-        text-align: center;
-        padding: 40px 20px;
-        font-family: "Segoe UI", Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Social icons */
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        margin-top: 10px;
-        flex-wrap: wrap;
-    }
-
-    .social-icons img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    .social-icons img:hover {
-        transform: scale(1.1);
-        opacity: 0.9;
-    }
-    </style>
-
-    <div class="social-section">
-
-        <div class="philosophy-section" style="text-align: center; margin-top: 1%;color: #2f4f4f !important; font-family: 'Roboto', arial, sans-serif; font-size: 32px !important; font-weight: normal; display: flex; align-items: center; justify-content: center; padding: 2% 20px;">
-            <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-right: 15px;">
-            <span>Get social with us</span>
-            <hr style="flex: 1; border: none; border-top: 2px solid #2f4f4f; margin-left: 15px;">
-        </div>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/JalteDiyeFoundation/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/jalte_diye_foundation/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/company/jalte-diye-foundation/" target="_blank" rel="noopener"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="https://x.com/JalteDiyeNPO" target="_blank" rel="noopener"><img src="twitter.png" alt="Twitter X"></a>
-            <a href="https://www.youtube.com/@JalteDiyeNPO" target="_blank" rel="noopener"><img src="yt.webp" alt="YouTube"></a>
-        </div>
-
-    </div>
-    <style>
-    .footer {
-        width: 100%;
-        background: #f5f5f5;
-        padding: 18px 10px;
-        text-align: center;
-        font-family: "Segoe UI", Arial, sans-serif;
-        font-size: 14px;
-        color: #555;
-        border-top: 1px solid #ddd;
-    }
-
-    .footer span {
-        font-weight: 600;
-        color: #1d3f3c;
-    }
-    </style>
-
-    <!-- =========================== FOOTER SECTION =========================== -->
-    <div class="footer">
-        © 2025 <span>Jalte Diye Foundation</span>. All Rights Reserved.
-    </div>
-
+        <footer class="footer">
+            © 2025 <span>Jalte Diye Foundation</span>. All Rights Reserved.
+        </footer>
+    </main>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
