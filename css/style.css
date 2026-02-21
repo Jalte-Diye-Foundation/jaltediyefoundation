@@ -28,7 +28,7 @@ body {
 	width: 100%;
 	font-family: "Roboto", Arial, sans-serif;
 	color: var(--text-main);
-	background: #eee;
+	background: rgba(251, 236, 221, 0.5);
 }
 
 h2,
